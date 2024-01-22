@@ -12,9 +12,9 @@ export default function App() {
   
   return (
       <NavigationContainer>
-      <Stack.Navigator initialRouteName="Start">
-        <Stack.Screen name="test" component={test} />
-        <Stack.Screen name="main" component={main} />
+      <Stack.Navigator initialRouteName="start">
+        <Stack.Screen name="Main" component={main} />
+        <Stack.Screen name="Test" component={test} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,17 +1,20 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import { Button } from "react-native";
 
-function main({navigation}) {
+function Main({navigation}) {
     return (
       <View>
-        <Text>start!</Text>
+         <SafeAreaView>
+            <Text>Page content</Text>
+        </SafeAreaView>
+        <Text>start page</Text>
         <Button 
           title="go to test screen" 
-          onPress={() => navigation.navigate('test')}
+          onPress={() => navigation.navigate('Test')}
         />
       </View>
     );
   }
 
-export default main;
+export default Main;

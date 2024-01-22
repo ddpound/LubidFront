@@ -2,16 +2,17 @@ import React from "react";
 import { View, Text } from "react-native";
 import { Button } from "react-native";
 
-function test({navigation}) {
-    return (
+function Test({navigation}) {
+    return ( 
       <View>
-        <Text>start!</Text>
+        <Text>test page!</Text>
+        <Text>LUBID</Text>
         <Button 
-          title="go to main" 
-          onPress={() => navigation.navigate('main')}
+          title="TEST" 
+          onPress={() => navigation.navigate('Main')}
         />
       </View>
     );
   }
 
-export default test;
+export default Test;

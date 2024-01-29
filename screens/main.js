@@ -1,19 +1,37 @@
 import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import { Button } from "react-native";
+
+const mainViewStyle = StyleSheet.create({
+  headerStyle : {
+    flex : 1
+  },
+  container : {
+    flex : 3
+  },
+  footerStyle:{
+    flex: 1
+  }
+});
+
 
 function Main({navigation}) {
     return (
-      <View>
-         <SafeAreaView>
-            <Text>Page content</Text>
-        </SafeAreaView>
-        <Text>start page</Text>
-        <Button 
-          title="go to test screen" 
-          onPress={() => navigation.navigate('Test')}
-        />
-      </View>
+      <>
+        <View style={mainViewStyle.headerStyle}>
+          <Text>헤더임</Text>
+        </View>
+        <View style={mainViewStyle.container}>
+          <SafeAreaView>
+              <Text>Page content</Text>
+          </SafeAreaView>
+          <Text>start page</Text>
+          <Button 
+            title="go to test screen" 
+            onPress={() => navigation.navigate('Test')}
+          />
+        </View>
+      </>
     );
   }
 

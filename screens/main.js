@@ -10,6 +10,11 @@ const mainViewStyle = StyleSheet.create({
     flex : 3
   },
   footerStyle:{
+    flex:0.3,
+    flexDirection: "row",
+    width: 100
+  },
+  footerUserButton:{
     flex: 1
   }
 });
@@ -30,6 +35,15 @@ function Main({navigation}) {
             title="go to test screen" 
             onPress={() => navigation.navigate('Test')}
           />
+        </View>
+        <View style={mainViewStyle.footerStyle}>
+          <View>
+            <Button title="홈"/>
+          </View>
+          <View style={mainViewStyle.footerUserButton}>
+            <Button title="유저정보"/>
+          </View>
+          <Text>푸터임</Text>
         </View>
       </>
     );
